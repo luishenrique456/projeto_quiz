@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main .listaQuestoes {
+    width: auto;
+    max-width: 50vw;
+    height: auto;
+    margin: 20px 0;
+}
+
+main .listaQuestoes th,
+main .listaQuestoes td {
+    border: 3px ;
+    border-radius: 5px;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+main .listaQuestoes tbody tr {
+    background-color: rgba(0, 128, 0, 0.1);
+    width: 400px;
+}
+
+main .listaQuestoes tbody tr:hover {
+    background-color: #f3faff;
+}
+    

@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="stylesheets/listarQuestoesPage-styles.css">
+</head>
+
+<div class="listaQuestoes">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Enunciado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let i = 0; i < questoes.length; i++) { %>
+                <% let questao = questoes[i] %>
+                <tr>
+                    <td><%= questao.id %></td>
+                    <td><%= questao.enunciado %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
