@@ -11,7 +11,7 @@ app.use(expressLayouts)
 // Padrão pasta views 
 app.set('views', 'views')
 app.set('view engine', 'ejs')
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 
 // Estilos
 app.use(express.static('public'))

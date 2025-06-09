@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="stylesheets/criarQuestao-styles.css">
+</head>
+
+<div class="containerCriarQuestao">
+
+    <form action="/criarQuestao" method="post">
+        <div class="enunciado">
+            <label for="enunciado">Digite o enunciado da questão</label>
+            <textarea type="text" name="enunciado" id="enunciado"  maxlength="1000" required ></textarea>
+        </div>
+
+        <div class="questoes">
+            <div class="questao">
+                <label for="alternativaA">Alternativa A</label>
+                <input type="text" name="alternativaA" id="alternativaA" required>
+            </div>
+
+            <div class="questao">
+                <label for="alternativaB">Alternativa B</label>
+                <input type="text" name="alternativaB" id="alternativaB" required>
+            </div>
+
+            <div class="questao">
+                <label for="alternativaC">Alternativa C</label>
+                <input type="text" name="alternativaC" id="alternativaC" required>
+            </div>
+
+            <div class="questao">
+                <label for="alternativaD">Alternativa D</label>
+                <input type="text" name="alternativaD" id="alternativaD" required>
+            </div>
+
+            <div class="questao">
+                <label for="alternativaE">Alternativa E</label>
+                <input type="text" name="alternativaE" id="alternativaE" required>
+            </div>
+        </div>
+        <div class="end">
+            <div class="correta">
+                <label for="alternativaCorreta">Selecione a alternativa correta</label>
+                <select name="alternativaCorreta" id="alternativaCorreta" required>
+                    <option value="" disabled selected></option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                    <option value="e">E</option>
+                </select>
+            </div>
+
+            <button type="submit">Criar questão</button>
+        </div>
+    </form>
+</div>

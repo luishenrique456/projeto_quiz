@@ -1,0 +1,35 @@
+<!-- Primeiro terei que recuperar os valores (enunciado, texto_resposta, id(tabela alternativa), id(tabela questao)) -->
+
+<div class="quizPage">
+
+    <div class="quiz">
+
+        <div class="enunciado">
+            <h2>
+                <%= questao.enunciado %>
+            </h2>
+        </div>
+
+        <!-- Questões que irão ser geradas conforme a quantidade de elementos da lista -->
+        <form action="#" method="post">
+            <div class="alternativas">
+                <% for (let i=0; i < listaAlternativas.length; i++) { %>
+                        <label class="alternativaGerada">
+                            <input type="radio" name="alternativa" value="<%= listaAlternativas[i].id_alternativa %>" required> 
+                            <p><%= listaAlternativas[i].texto_resposta %></p>
+                        </label>
+                <% } %>
+            </div>
+            <input type="hidden" name="id_questao" value="<%= questaoDados.id_questao %>">
+        </form>
+
+
+        <!-- Botão de responder ou Botão de próximo -->
+        <% if (title =='Quiz' ) { %>
+            <div class="responder"><button type="submit">responder</button></div>
+        <% } else if(title=='Gabarito' ){ %>
+                    <div class="proximo"><a href="#">Proximo</a></div>
+            <% } %>
+
+    </div>
+</div>

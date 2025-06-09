@@ -6,8 +6,13 @@
     <table>
         <thead>
             <tr>
+                <% if (questoes.length === 0) { %>
+
+                <div class="questao_vazia"><h3>Nenhuma questão registrada</h3></div>
+            <% } else { %>
                 <th>ID</th>
                 <th>Enunciado</th>
+                <% } %>
             </tr>
         </thead>
         <tbody>
