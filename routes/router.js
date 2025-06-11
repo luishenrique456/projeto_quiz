@@ -37,14 +37,16 @@ router.get('/apagarQuestao', (req, res) => {
     res.render('pages/apaga_questao');
 });
 
+
 router.post('/apagarQuestao', async (req, res) => {
     try {
-        await QuizController.deletarQuestao(req, res);
-        res.redirect('/listarQuestoes');
+        await QuizController.deletarQuestao(req, res); // controller já faz o redirect
     } catch (err) {
         res.status(500).send('Erro ao apagar a questão');
     }
 });
+
+
 
 
 

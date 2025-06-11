@@ -1,11 +1,21 @@
 
+<head>
+    <link rel="stylesheet" href="stylesheets/apagaQuestao-styles.css">
+</head>
 
 <div class="containerApagaQuestao">
     <h1>Apagar Questão</h1>
     <form action="/apagarQuestao" method="POST">
-        <label for="id_questao">ID da Questão:</label>
-        <input type="number" name="id_questao" min="1" required>
-        <div>
+
+        <div class="enuciadoQuestao">
+            <label for="id_questao"> Inseri o ID da Questão :</label>
+        </div>
+
+        <div class="campo_texto">
+            <input type="number" name="id_questao" min="1" placeholder="Digite ID da questão" required>
+        </div>
+
+        <div class="botao_apaga">
             <button type="submit">Apagar</button>
         </div>
         

@@ -3,7 +3,7 @@ const { error, log } = require('console');
 
 const QuestaoModel = require('../models/questaoModel');
 const AlternativaModel = require('../models/alternativaModel');
-const DeleteModel = require('../models/deleteModel');
+// const DeleteModel = require('../models/deleteModel');
 
 
 exports.mostrarQuestoes = async (req, res) => {
@@ -58,15 +58,16 @@ exports.deletarQuestao = async(req , res) =>{
     try{
         const id_questao = req.body.id_questao; // pega o ID digitado no formulário
 
-        const deletar = new DeleteModel(id_questao);
+        const deletar = new QuestaoModel({id : id_questao});
         await deletar.deletarQuestao(); // chama o método para deletar
 
         console.log(`Questão com ID ${id_questao} e suas alternativas foram apagadas`);
-        res.redirect('/listarQuestoes');
+        return res.redirect('/listarQuestoes');
 
     }catch(err){
         console.log('Erro ao deletar questão e alternativas:', err);
         res.status(500).send('Erro ao apagar a questão');
 
     }
+
 }
