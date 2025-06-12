@@ -1,0 +1,29 @@
+main{
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+main .link_comeca {
+    background-color: #1CB0F6;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main .botao_comeca{
+    margin: 40px;
+    text-align: center;
+    
+
+}
+
+main .link_comeca:hover {
+    background-color: #fff;
+    color: black; 
+}

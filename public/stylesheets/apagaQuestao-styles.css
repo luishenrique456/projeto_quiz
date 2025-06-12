@@ -4,11 +4,11 @@ main{
     
 }
 
-.containerApagaQuestao , .enuciadoQuestao , .campo_texto , .botao_apaga {
+main .containerApagaQuestao , .enuciadoQuestao , .campo_texto , .botao_apaga {
     padding: 20px; 
 }
 
-.enuciadoQuestao{
+main .enuciadoQuestao{
     font-size: 20px;
 }
 
@@ -19,13 +19,13 @@ input[type="number"] {
                 
 }
 
-.containerApagaQuestao,
+main .containerApagaQuestao,
 input[type="number"]:focus{
     border: none;
     outline: none;
 } 
 
-.botao_apaga button {
+main .botao_apaga button {
     background-color: #1CB0F6;
     color: white;
     border: none;
@@ -36,7 +36,7 @@ input[type="number"]:focus{
     transition: background-color 0.3s;
 }
 
-.botao_apaga button:hover {
+main .botao_apaga button:hover {
     background-color: #fff;
     color: black; 
 }
